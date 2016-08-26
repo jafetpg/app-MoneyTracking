@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Framework Básico</title>
+
+    <link rel="stylesheet" href="<?php echo APP_URL; ?>views/layouts/default/css/normalize.min.css">
+    <link rel="stylesheet" href="<?php echo APP_URL; ?>views/layouts/default/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo APP_URL; ?>views/layouts/default/css/main.css">
+    <link rel="stylesheet" href="views/layouts/default/css3/grid-responsive.css" media="screen">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <!-- Pushy CSS -->
+    <link rel="stylesheet" href="views/layouts/default/pushy.css">
+
+    <script src="<?php echo APP_URL; ?>views/layouts/default/js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="views/layouts/default/jvs/jquery.min.js"></script>
+</head>
+<style>
+  nav li a{
+  text-decoration: none;
+  padding: 5px;
+  color: ;
+  font-weight: bold;
+  }
+
+  nav li a:hover{
+    background-color: white;
+    border-radius: 5px;
+  }
+</style>
+<body>
+
+<div id="ocultatexto">
+    <a href="#" class="bt-menu">
+    Menu
+</div>
+
+
+
+
+   <div class="container">
+       <div class="row">
+           <header>
+               <div class="col-md-6"><h1 class="m1">Money Tracking</h1></div>
+               <br>
+               <br>
+               <br>
+               
+               
+
+
+               <style>
+                 .m1 {
+                   color: tomato;
+                   font-size: 30px;
+                 }
+
+                 div {
+                   font-family: "comfortaa";
+                 }
+
+                 .barra {
+                   margin-right: 7%;
+                   font-size: 18px;
+                   background-color: #00B159;
+                   display: inline-grid;
+                 }
+
+                 .barra:hover {
+                   margin-right: 7%;
+
+                 }
+
+
+                
+                 h4 {
+                  float: right;
+
+                 }
+
+                 .salir {
+                  float: right;
+                  padding-top: 5%;
+                  text-decoration: underline;
+                  
+                 }
+
+                 .salir:hover {
+                  font-size: 18px;
+
+                  
+                 }
+
+
+                 @media (max-width: 800px){
+                    .barra{ display: block }
+
+                  
+                  }
+          
+
+                  @media (min-width: 600px){
+                    
+                    #ocultatexto { display: none;  }
+                  
+                  }
+
+                
+               </style>
+               <div class="col-md-6"><?php
+                    if (isset($_SESSION['username'])): ?>
+	                   <h4>Hola <?php echo $_SESSION['username']; ?></h4>
+	                   <div class="salir"><a href="<?php echo APP_URL; ?>users/logout">Salir</a></div>
+                       <?php endif; ?></div>
+           </header>
+       </div>
+       <div class="row">
+           <div class="col-md-12">
+             <br />
+               <nav>
+                   <ul>
+                       <li class="barra"><a href="<?php echo APP_URL; ?>">Home</a></li>
+                       <li class="barra"><a href="<?php echo APP_URL; ?>pages/index">Pages</a></li>
+                       <li class="barra"><a href="<?php echo APP_URL; ?>users/add">Users</a></li>
+                       <li class="barra"><a href="<?php echo APP_URL; ?>categories/add">Categories</a></li>
+                       <li class="barra"><a href="<?php echo APP_URL; ?>transactions/add">Transactions</a></li>
+                       <li class="barra"><a href="<?php echo APP_URL; ?>accounts/add">Accounts</a></li>
+                       <li><a href="<?php echo APP_URL; ?>users/logout"></a></li>
+                   </ul>
+               </nav>
+           </div>
+       </div>
+
+  </html>

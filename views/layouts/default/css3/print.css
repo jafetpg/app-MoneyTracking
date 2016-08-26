@@ -1,0 +1,27 @@
+@page{
+  size:landscape;
+}
+
+body{
+  font-family: verdana;
+}
+
+p{
+  font-size: 12pt;
+}
+
+aside{
+  display: none;
+}
+
+img{
+    visibility: hidden;
+}
+
+nav li{
+    visibility: hidden;
+}
+
+#menu{
+    visibility: hidden;
+}
